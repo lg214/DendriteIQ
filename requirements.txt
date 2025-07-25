@@ -1,20 +1,24 @@
-# ── core frameworks ─────────────────────────────────────────
---extra-index-url https://download.pytorch.org/whl/cpu          # <- point at the CPU wheel repo
+# -------------------------------------------------
+# requirements.txt  –  DendriteIQ
+# -------------------------------------------------
 
-torch==2.3.0+cpu
-torchvision==0.18.0+cpu
-# torchaudio is optional for you — comment it out if you don't need it
-torchaudio==2.3.0+cpu
+# Pull CPU‑only PyTorch wheels
+--extra-index-url https://download.pytorch.org/whl/cpu
 
-# ── nn wrappers & aug ────────────────────────────────────────
-segmentation-models-pytorch==0.3.3
-albumentations>=1.4.0
-
-# ── image / CV utils ─────────────────────────────────────────
-opencv-python-headless
-pillow
-scikit-image
-
-# ── data ─────────────────────────────────────────────────────
-numpy
+# Core app
 streamlit>=1.35
+
+# Deep‑learning stack (exactly what you have locally)
+torch==2.7.1+cpu
+torchvision==0.22.1+cpu
+torchaudio==2.7.1+cpu            # ← drop if you never use audio
+
+# Segmentation / augmentation libs
+segmentation-models-pytorch==0.5.0
+albumentations==2.0.8
+
+# Image & utility packages
+opencv-python-headless
+scikit-image
+pillow
+numpy
