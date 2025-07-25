@@ -1,0 +1,10 @@
+streamlit
+torch
+torchvision
+torchaudio
+segmentation-models-pytorch
+albumentations
+opencv-python-headless
+numpy
+pillow
+scikit-image
