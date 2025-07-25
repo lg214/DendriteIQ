@@ -1,10 +1,20 @@
-streamlit
-torch
-torchvision
-torchaudio
-segmentation-models-pytorch
-albumentations
+# ── core frameworks ─────────────────────────────────────────
+--extra-index-url https://download.pytorch.org/whl/cpu          # <- point at the CPU wheel repo
+
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
+# torchaudio is optional for you — comment it out if you don't need it
+torchaudio==2.3.0+cpu
+
+# ── nn wrappers & aug ────────────────────────────────────────
+segmentation-models-pytorch==0.3.3
+albumentations>=1.4.0
+
+# ── image / CV utils ─────────────────────────────────────────
 opencv-python-headless
-numpy
 pillow
 scikit-image
+
+# ── data ─────────────────────────────────────────────────────
+numpy
+streamlit>=1.35
